@@ -1,10 +1,11 @@
-// See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ForEach
-
-function myEach(arr, callback) {
-  
+function myFilter(arr, callback) {
+  var newArr = [];
   for (let i = 0; i < arr.length; i++) {
-  	callback(arr[i], i, arr);
+  	if (callback(arr[i], i, arr)) {
+  	newArr.push(arr[i]);
   }
+ }
+ return neArr;
 }
 
 /*
@@ -19,4 +20,4 @@ function myEach(arr, callback) {
 
 
 // export this function (you can ignore this for now)
-module.exports = myEach;
+module.exports = myFilter;

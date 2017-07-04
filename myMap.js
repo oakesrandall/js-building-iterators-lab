@@ -3,7 +3,15 @@
 function myMap(arr, callback) {
 
 //  CODE INSIDE HERE   //
+var newArr = [];
 
+//for each item in the array
+	for (let i = 0; i < arr.length; i++) {
+		// pass to callback
+		//push into array
+		newArr.push(callback(arr[i], i, arr));
+	}
+	return newArr;
 }
 
 /*
@@ -13,6 +21,7 @@ function myMap(arr, callback) {
 
 
 
+//push into array
 
 
 
